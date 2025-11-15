@@ -1,0 +1,63 @@
+﻿<Page x:Class="ParkSystem_UI.SuccessfulPromotionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ParkSystem_UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="1200"
+      Title="SuccessfulPromotionPage">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="#F6F3EB">
+        <StackPanel Margin="40" HorizontalAlignment="Center">
+
+            <!-- Title Block -->
+            <Border Background="#3C6E71"
+                    CornerRadius="12"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Width="1200"
+                    Padding="15"
+                    Margin="0,0,0,20"
+                    HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="Promotion Successful!"
+                               FontFamily="Playfair Display"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Foreground="#F6F3EB"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="You have successfully promoted an area of interest at Onewhero Bay Heritage Park."
+                               FontFamily="IBM Plex Sans"
+                               FontSize="20"
+                               FontStyle="Italic"
+                               Foreground="#F6F3EB"
+                               TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Confirmation Message Block -->
+            <Border Background="White"
+                    CornerRadius="10"
+                    BorderBrush="#3C6E71"
+                    BorderThickness="2"
+                    Padding="30"
+                    Width="600"
+                    HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="Your Promotion has been successfully made."
+                               FontFamily="IBM Plex Sans"
+                               FontSize="18"
+                               Foreground="#2F2F2F"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Margin="0,0,0,20"/>
+
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

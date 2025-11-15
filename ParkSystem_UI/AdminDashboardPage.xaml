@@ -1,0 +1,43 @@
+﻿<Page x:Class="ParkSystem_UI.AdminDashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ParkSystem_UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="1200"
+      Title="AdminDashboardPage">
+
+    <Page.Resources>
+        <Style x:Key="AdminButton" TargetType="Button">
+            <Setter Property="Background" Value="#E2B857"/>
+            <Setter Property="Foreground" Value="#2F2F2F"/>
+            <Setter Property="FontFamily" Value="Playfair Display"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#F6F3EB">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
+            <TextBlock Text="Admin Dashboard"
+                       FontFamily="Playfair Display"
+                       FontSize="24"
+                       Foreground="#2F2F2F"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="VisitorMgmtButton" Content="Visitor Management" Style="{StaticResource AdminButton}" Click="VisitorMgmtButton_Click"/>
+                <Button x:Name="AnalyticsButton" Content="Analytics &amp; Reports" Style="{StaticResource AdminButton}" Click="AnalyticsButton_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="PromotionsButton" Content="Promotions" Style="{StaticResource AdminButton}" Click="PromotionsButton_Click"/>
+                <Button x:Name="EventBookingButton" Content="Event Booking" Style="{StaticResource AdminButton}" Click="EventBookingButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

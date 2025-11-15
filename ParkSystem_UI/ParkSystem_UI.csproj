@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\STOCK_event1photo.jpg" />
+    <None Remove="Assets\STOCK_event2photo.jpg" />
+    <None Remove="Assets\STOCK_event3photo.jpg" />
+    <None Remove="Assets\STOCK_event4photo.jpeg" />
+    <None Remove="Assets\STOCK_fantailphoto.jpg" />
+    <None Remove="Assets\STOCK_graphplaceholder1.png" />
+    <None Remove="Assets\STOCK_graphplaceholder2.webp" />
+    <None Remove="Assets\STOCK_graphplaceholder3.png" />
+    <None Remove="Assets\STOCK_graphplaceholder4.png" />
+    <None Remove="Assets\STOCK_kiwiphoto.jpg" />
+    <None Remove="Assets\STOCK_maoriculturephoto.jpeg" />
+    <None Remove="Assets\STOCK_maraephoto.jpg" />
+    <None Remove="Assets\STOCK_museumphoto.jpg" />
+    <None Remove="Assets\STOCK_profileplaceholder.jpeg" />
+    <None Remove="Assets\STOCK_Tuiphoto.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\STOCK_event1photo.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_event2photo.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_event3photo.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_event4photo.jpeg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_fantailphoto.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_graphplaceholder1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_graphplaceholder2.webp">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_graphplaceholder3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_graphplaceholder4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_kiwiphoto.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_maoriculturephoto.jpeg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_maraephoto.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_museumphoto.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_profileplaceholder.jpeg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\STOCK_Tuiphoto.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ParkSystem.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Visitor.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>

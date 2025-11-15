@@ -1,0 +1,101 @@
+﻿<Page x:Class="ParkSystem_UI.BookingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ParkSystem_UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="1200"
+      Title="BookingPage">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="#F6F3EB">
+        <StackPanel Margin="40" HorizontalAlignment="Center">
+
+            <!-- Title Block -->
+            <Border Background="#3C6E71"
+                    CornerRadius="0"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Width="1200"
+                    Padding="15"
+                    Margin="0,0,0,20"
+                    HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="Booking"
+                               FontFamily="Playfair Display"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Foreground="#F6F3EB"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="Here are the current events scheduled for Onewhero Bay Heritage Park!"
+                               FontFamily="IBM Plex Sans"
+                               FontSize="20"
+                               FontStyle="Italic"
+                               Foreground="#F6F3EB"
+                               TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Event List Block -->
+            <Border Background="White"
+                    CornerRadius="10"
+                    BorderBrush="#3C6E71"
+                    BorderThickness="2"
+                    Padding="30"
+                    Width="950"
+                    HorizontalAlignment="Center">
+                <ListBox x:Name="EventListBox" Background="Transparent" BorderThickness="0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="White" CornerRadius="8" Margin="0,10" Padding="20">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2" Opacity="0.1"/>
+                                </Border.Effect>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Row="0" Grid.Column="0">
+                                        <TextBlock Text="{Binding EventDetails}"
+                                                   FontFamily="Playfair Display"
+                                                   FontSize="18"
+                                                   Foreground="#2F2F2F"
+                                                   TextWrapping="Wrap"/>
+
+                                        <TextBlock Text="{Binding EventDate, StringFormat='Date: {0:dd/MM/yyyy}'}"
+                                                   FontFamily="IBM Plex Sans"
+                                                   FontSize="14"
+                                                   Foreground="#5A7263"
+                                                   Margin="0,5,0,0"/>
+                                    </StackPanel>
+
+                                    <Button x:Name="BookButton"
+                                            Grid.Row="0" Grid.Column="1"
+                                            Content="Book Now!"
+                                            Click="BookButton_Click"
+                                            FontFamily="Playfair Display"
+                                            FontSize="16"
+                                            Background="#E2B857"
+                                            Foreground="#2F2F2F"
+                                            Padding="15,10"
+                                            Margin="20,0,0,0"
+                                            Cursor="Hand"
+                                            VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
