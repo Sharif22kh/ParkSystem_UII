@@ -28,7 +28,7 @@
 
             <!-- Title Block -->
             <Border Background="#3C6E71"
-                    CornerRadius="12"
+                    CornerRadius="0"
                     BorderBrush="White"
                     BorderThickness="2"
                     Width="1200"
