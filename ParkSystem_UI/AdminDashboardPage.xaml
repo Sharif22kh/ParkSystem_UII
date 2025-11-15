@@ -22,22 +22,59 @@
         </Style>
     </Page.Resources>
 
-    <Grid Background="#F6F3EB">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
-            <TextBlock Text="Admin Dashboard"
-                       FontFamily="Playfair Display"
-                       FontSize="24"
-                       Foreground="#2F2F2F"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,20"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="VisitorMgmtButton" Content="Visitor Management" Style="{StaticResource AdminButton}" Click="VisitorMgmtButton_Click"/>
-                <Button x:Name="AnalyticsButton" Content="Analytics &amp; Reports" Style="{StaticResource AdminButton}" Click="AnalyticsButton_Click"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="PromotionsButton" Content="Promotions" Style="{StaticResource AdminButton}" Click="PromotionsButton_Click"/>
-                <Button x:Name="EventBookingButton" Content="Event Booking" Style="{StaticResource AdminButton}" Click="EventBookingButton_Click"/>
-            </StackPanel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="#F6F3EB">
+        <StackPanel Margin="40" HorizontalAlignment="Center">
+
+            <!-- Title Block -->
+            <Border Background="#3C6E71"
+                    CornerRadius="12"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Width="1200"
+                    Padding="15"
+                    Margin="0,0,0,20"
+                    HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="Admin Dashboard"
+                               FontFamily="Playfair Display"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Foreground="#F6F3EB"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="Manage visitors, bookings, promotions, and reports from one central place."
+                               FontFamily="IBM Plex Sans"
+                               FontSize="20"
+                               FontStyle="Italic"
+                               Foreground="#F6F3EB"
+                               TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Dashboard Button Block -->
+            <Border Background="White"
+                    CornerRadius="10"
+                    BorderBrush="#3C6E71"
+                    BorderThickness="2"
+                    Padding="30"
+                    Width="950"
+                    HorizontalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="VisitorMgmtButton" Content="Visitor Management" Style="{StaticResource AdminButton}" Click="VisitorMgmtButton_Click"/>
+                        <Button x:Name="AnalyticsButton" Content="Analytics &amp; Reports" Style="{StaticResource AdminButton}" Click="AnalyticsButton_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="PromotionsButton" Content="Promotions" Style="{StaticResource AdminButton}" Click="PromotionsButton_Click"/>
+                        <Button x:Name="EventBookingButton" Content="Event Booking" Style="{StaticResource AdminButton}" Click="EventBookingButton_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Page>
