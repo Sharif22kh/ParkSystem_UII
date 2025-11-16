@@ -49,7 +49,7 @@ SET IDENTITY_INSERT Visitors ON; -- Allow inserting specific IDs
 INSERT INTO Visitors (VisitorID, Name, ContactInfo)
 VALUES 
 (1, 'Sharif', 'sharif@yoobee.com'),
-(2, 'Ruhia', 'ruhia@yoobee.com');
+(2, 'Ruiha', 'ruiha@yoobee.com');
 SET IDENTITY_INSERT Visitors OFF; -- Turn off ID inserting
 GO
 

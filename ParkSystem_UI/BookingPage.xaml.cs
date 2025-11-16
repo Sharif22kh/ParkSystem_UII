@@ -58,6 +58,9 @@ namespace ParkSystem_UI
             {
                 MessageBox.Show("Error: Booking failed. You may have already booked this event.");
             }
+
+
         }
+
     }
 }

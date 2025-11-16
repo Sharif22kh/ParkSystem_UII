@@ -1,5 +1,4 @@
-﻿<!-- Frontend code by Aki(Riria) Hamblett-Watt -->
-    <Page x:Class="ParkSystem_UI.PromotionsPage"
+﻿<Page x:Class="ParkSystem_UI.PromotionsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Background="#F6F3EB">
@@ -7,7 +6,6 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="40">
 
-            <!-- Title Block -->
             <Border Background="#3C6E71"
                     CornerRadius="0"
                     BorderBrush="White"
@@ -26,7 +24,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,10"/>
                     <TextBlock Text="Select which area of interest you'd like to promote to our visitors!"
-                               FontFamily="IBM Plex Sans"
+                               FontFamily="Playfair Display"
                                FontSize="20"
                                FontStyle="Italic"
                                Foreground="#F6F3EB"
@@ -34,10 +32,8 @@
                 </StackPanel>
             </Border>
 
-            <!-- Promotion Cards -->
-            <WrapPanel ItemWidth="580" ItemHeight="Auto" Orientation="Horizontal">
+            <WrapPanel ItemWidth="580" ItemHeight="Auto" Orientation="Horizontal" HorizontalAlignment="Center">
 
-                <!-- Museum -->
                 <Border Background="White" CornerRadius="10" BorderBrush="#3C6E71" BorderThickness="2" Padding="15" Margin="10">
                     <StackPanel>
                         <Image Source="/Assets/STOCK_museumphoto.jpg" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
@@ -48,13 +44,13 @@
                                    Foreground="#2F2F2F"
                                    Margin="0,0,0,5"/>
                         <TextBlock Text="This is filler information and words for the Museum promotions at Onewhero Bay Heritage Park..."
-                                   FontFamily="IBM Plex Sans"
+                                   FontFamily="Playfair Display"
                                    FontSize="14"
                                    Foreground="#5A7263"
                                    TextWrapping="Wrap"
                                    Margin="0,0,0,10"/>
                         <Button Content="Promote"
-                                FontFamily="Playfair Display"
+                                Click="PromoteButton_Click" FontFamily="Playfair Display"
                                 FontSize="16"
                                 Background="#E2B857"
                                 Foreground="#2F2F2F"
@@ -66,7 +62,6 @@
                     </StackPanel>
                 </Border>
 
-                <!-- Special Events -->
                 <Border Background="White" CornerRadius="10" BorderBrush="#3C6E71" BorderThickness="2" Padding="15" Margin="10">
                     <StackPanel>
                         <Image Source="/Assets/STOCK_event4photo.jpeg" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
@@ -77,13 +72,13 @@
                                    Foreground="#2F2F2F"
                                    Margin="0,0,0,5"/>
                         <TextBlock Text="This is filler information and words for the Special Event promotions at Onewhero Bay Heritage Park..."
-                                   FontFamily="IBM Plex Sans"
+                                   FontFamily="Playfair Display"
                                    FontSize="14"
                                    Foreground="#5A7263"
                                    TextWrapping="Wrap"
                                    Margin="0,0,0,10"/>
                         <Button Content="Promote"
-                                FontFamily="Playfair Display"
+                                Click="PromoteButton_Click" FontFamily="Playfair Display"
                                 FontSize="16"
                                 Background="#E2B857"
                                 Foreground="#2F2F2F"
@@ -95,7 +90,6 @@
                     </StackPanel>
                 </Border>
 
-                <!-- Native Birds & Reptiles Exhibit -->
                 <Border Background="White" CornerRadius="10" BorderBrush="#3C6E71" BorderThickness="2" Padding="15" Margin="10">
                     <StackPanel>
                         <Image Source="/Assets/STOCK_fantailphoto.jpg" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
@@ -106,13 +100,13 @@
                                    Foreground="#2F2F2F"
                                    Margin="0,0,0,5"/>
                         <TextBlock Text="This is filler information and words for the Native Birds and Reptiles Exhibit promotions at Onewhero Bay Heritage Park..."
-                                   FontFamily="IBM Plex Sans"
+                                   FontFamily="PlayDIsplay"
                                    FontSize="14"
                                    Foreground="#5A7263"
                                    TextWrapping="Wrap"
                                    Margin="0,0,0,10"/>
                         <Button Content="Promote"
-                                FontFamily="Playfair Display"
+                                Click="PromoteButton_Click" FontFamily="Playfair Display"
                                 FontSize="16"
                                 Background="#E2B857"
                                 Foreground="#2F2F2F"
@@ -124,7 +118,6 @@
                     </StackPanel>
                 </Border>
 
-                <!-- Culture -->
                 <Border Background="White" CornerRadius="10" BorderBrush="#3C6E71" BorderThickness="2" Padding="15" Margin="10">
                     <StackPanel>
                         <Image Source="/Assets/STOCK_event3photo.jpg" Height="150" Stretch="UniformToFill" Margin="0,0,0,10"/>
@@ -135,13 +128,13 @@
                                    Foreground="#2F2F2F"
                                    Margin="0,0,0,5"/>
                         <TextBlock Text="This is filler information and words for the Culture promotions at Onewhero Bay Heritage Park..."
-                                   FontFamily="IBM Plex Sans"
+                                   FontFamily="Playfair Display"
                                    FontSize="14"
                                    Foreground="#5A7263"
                                    TextWrapping="Wrap"
                                    Margin="0,0,0,10"/>
                         <Button Content="Promote"
-                                FontFamily="Playfair Display"
+                                Click="PromoteButton_Click" FontFamily="Playfair Display"
                                 FontSize="16"
                                 Background="#E2B857"
                                 Foreground="#2F2F2F"

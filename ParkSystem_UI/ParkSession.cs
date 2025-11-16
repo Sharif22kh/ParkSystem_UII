@@ -1,6 +1,6 @@
 ﻿namespace ParkSystem_UI
 {
-    
+
     public static class ParkSession
     {
         public static int? LoggedInVisitorID { get; private set; }

@@ -1,28 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ParkSystem_UI
 {
-    /// <summary>
-    /// Interaction logic for PromotionsPage.xaml
-    /// </summary>
     public partial class PromotionsPage : Page
     {
         public PromotionsPage()
         {
             InitializeComponent();
+        }
+
+        // This one method will handle ALL your "Promote" buttons
+        private void PromoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            // In a real app, this would call our backend "engine"
+            // to find users and send emails.
+
+            // For this project, we just show a success message
+            // based on your Hi-Fi design (Page 11).
+            MessageBox.Show("All relevant visitors with this area of interest have been notified!");
+
+            // Optional: You can navigate to a "Success" page
+            // this.NavigationService.Navigate(new SuccessfulPromotionPage());
         }
     }
 }
