@@ -32,7 +32,7 @@ namespace ParkSystem_UI
 
         private void BookButton_Click(object sender, RoutedEventArgs e)
         {
-            // 6. Check if a user is actually logged in
+            // this to Check if a user is actually logged in
             if (!ParkSession.IsLoggedIn())
             {
                 MessageBox.Show("You must log in before you can book an event.");
@@ -40,14 +40,14 @@ namespace ParkSystem_UI
                 return;
             }
 
-            // 7. A user IS logged in. Get the event they clicked on.
+            // this to get the event they clicked on.
             Button clickedButton = (Button)sender;
             Event eventToBook = (Event)clickedButton.DataContext;
 
-            // 8. Get the logged-in user's ID from our session
+            // to Get the logged-in user's ID from our session
             int visitorID = ParkSession.LoggedInVisitorID.Value;
 
-            // 9. Call our backend C# method to book the event
+            // to Call our backend C# method to book the event
             bool success = park.CreateBooking(visitorID, eventToBook.EventID);
 
             if (success)

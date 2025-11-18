@@ -10,15 +10,10 @@ namespace ParkSystem_UI
 {
     public class ParkSystem
     {
-        // This is the code that do  "connecccction string" that tells our C# code  where to find the databasess.
+        // This is the  connecccction string that tells our C# code  where to find the databasess.
 
         private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OnewheroParkDB;Integrated Security=True";
         
-        /**
-          week 1 
-        - Visitor Registration
-         -Visitor Tracking
-         */
         public bool RegisterNewVisitor(string name, string contactInfo)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -45,10 +40,6 @@ namespace ParkSystem_UI
             }
         }
 
-        /**
-         * week 2
-        Information Dissemination
-         */
         public List<Event> GetUpcomingEvents()
         {
             List<Event> upcomingEvents = new List<Event>();
@@ -85,10 +76,6 @@ namespace ParkSystem_UI
             return upcomingEvents;
         }
 
-        /**
-         * week 2
-         * for Event Booking
-         */
         public bool CreateBooking(int visitorID, int eventID)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -114,10 +101,7 @@ namespace ParkSystem_UI
                 }
             }
         }
-        /**
-     * ADMIN FUNCTION
-     * This to gets a list of all visitors from the 'Visitors' table.
-     */
+       
         public List<Visitor> GetAllVisitors()
         {
             List<Visitor> allVisitors = new List<Visitor>();
@@ -158,8 +142,8 @@ namespace ParkSystem_UI
 
         /**
      * VISITOR FUNCTION
-     * This method tries to find a visitor in the database.
-     * If found, it returns the Visitor object. If not, it returns null.
+      //This  to find a visitor in the database.
+      If not, it returns null.
      */
         public Visitor LoginVisitor(string name, string contactInfo)
         {
@@ -255,7 +239,7 @@ namespace ParkSystem_UI
         }
         /**
      * VISITOR FUNCTION
-     * This method gets a list of all bookings for a *specific* visitor ID.
+     * This to gets a list of all bookings for allvisitor........................
      */
         public List<Event> GetMyBookings(int visitorID)
         {
@@ -267,7 +251,7 @@ namespace ParkSystem_UI
                 {
                     connection.Open();
                     // This query JOINS Events and Bookings to get event details
-                    // for a specific visitor.
+                    
                     string sqlQuery = @"
                     SELECT E.EventDetails, E.EventDate
                     FROM Events E

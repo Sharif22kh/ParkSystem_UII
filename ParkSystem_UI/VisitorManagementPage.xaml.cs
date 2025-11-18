@@ -8,14 +8,14 @@ namespace ParkSystem_UI
 {
     public partial class VisitorManagementPage : Page
     {
-        // 1. Create an instance of our backend "engine"
+        // to Create an instance of our backend "engine"............................
         private ParkSystem park = new ParkSystem();
 
         public VisitorManagementPage()
         {
             InitializeComponent();
 
-            // 2. Load the visitors when the page opens
+            // this one Load the visitors when the page opensss
             LoadVisitors();
         }
 
@@ -23,10 +23,10 @@ namespace ParkSystem_UI
         {
             try
             {
-                // 3. Call our backend C# method to get visitors
+                //  Call the backend C# method to get visitros
                 List<Visitor> allVisitors = park.GetAllVisitors();
 
-                // 4. Put the list of visitors into our visual ListBox
+                // Put the list of vistiors into our box
                 VisitorListBox.ItemsSource = allVisitors;
             }
             catch (Exception ex)
@@ -35,7 +35,6 @@ namespace ParkSystem_UI
             }
         }
 
-        // Note: The "Delete Visitor" button logic is not
-        //       implemented in the backend yet.
+       
     }
 }
