@@ -1,24 +1,19 @@
-﻿/* ================================================================================
- ONEWHERO BAY HERITAGE PARK - DATABASE SCRIPT
- This script will DROP (delete) the old database and REBUILD a clean
- one with the correct tables and sample data.
-================================================================================
-*/
+﻿
 
-/* 1. COMPLETELY DELETE THE OLD DATABASE (if it exists) */
 /* This ensures a 100% clean start */
 DROP DATABASE IF EXISTS OnewheroParkDB;
 GO
 
-/* 2. CREATE A NEW, EMPTY DATABASE */
+/* this create a new, database */
+
 CREATE DATABASE OnewheroParkDB;
 GO
 
-/* 3. SWITCH TO THE NEW DATABASE */
+/*  SWITCH TO THE NEW DATABASE */
 USE OnewheroParkDB;
 GO
 
-/* 4. CREATE THE VISITORS TABLE */
+/* CREATE THE VISITORS TABLE */
 CREATE TABLE Visitors (
     VisitorID INT PRIMARY KEY IDENTITY(1,1),
     Name VARCHAR(100) NOT NULL,
@@ -26,7 +21,7 @@ CREATE TABLE Visitors (
 );
 GO
 
-/* 5. CREATE THE EVENTS TABLE */
+/*  CREATE THE EVENTS TABLE */
 CREATE TABLE Events (
     EventID INT PRIMARY KEY IDENTITY(1,1),
     EventDetails VARCHAR(255) NOT NULL,
@@ -34,7 +29,7 @@ CREATE TABLE Events (
 );
 GO
 
-/* 6. CREATE THE BOOKINGS TABLE (with Foreign Keys) */
+/*  CREATE THE BOOKINGS TABLE */
 CREATE TABLE Bookings (
     BookingID INT PRIMARY KEY IDENTITY(1,1),
     VisitorID INT NOT NULL,
@@ -44,13 +39,13 @@ CREATE TABLE Bookings (
 );
 GO
 
-/* 7. POPULATE TABLES WITH THE CORRECT SAMPLE DATA */
-SET IDENTITY_INSERT Visitors ON; -- Allow inserting specific IDs
+/*  dummy visirtors to do th4e4 testing*/
+SET IDENTITY_INSERT Visitors ON; 
 INSERT INTO Visitors (VisitorID, Name, ContactInfo)
 VALUES 
 (1, 'Sharif', 'sharif@yoobee.com'),
 (2, 'Ruiha', 'ruiha@yoobee.com');
-SET IDENTITY_INSERT Visitors OFF; -- Turn off ID inserting
+SET IDENTITY_INSERT Visitors OFF; 
 GO
 
 SET IDENTITY_INSERT Events ON;
@@ -62,7 +57,7 @@ VALUES
 SET IDENTITY_INSERT Events OFF;
 GO
 
-/* 8. SAMPLE BOOKING: Sharif (VisitorID 1) books the Kiwi Tour (EventID 1) */
+/* sample booking for : Sharif (VisitorID 1) books the Kiwi Tour (EventID 1) */
 INSERT INTO Bookings (VisitorID, EventID)
 VALUES
 (1, 1);
